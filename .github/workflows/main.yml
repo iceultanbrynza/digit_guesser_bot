@@ -1,16 +1,14 @@
-name: My First CI Test
+name: CI
 
-on:
-  push:
-  workflow_dispatch:
+on: [push]
 
 jobs:
-  test:
+  build:
+  
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Check file exists
-        run: test -f README.md
+    
+      - name: Run a one-line script
+    
+        run: echo "Hello, world from my first CI pipeline!"
